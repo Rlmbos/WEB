@@ -9,15 +9,17 @@
 <link rel="stylesheet" href="Styles/UiLink.8385fcea.css">
 <link rel="stylesheet" href="Styles/SectionCardsItem.33192f47.css">
 <link rel="stylesheet" href="Styles/footer.css">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Gotham+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 
+<style>
 header {
     font-size: 24px;
     text-align: center;
 }
 
 body {
-    font-family: "Futura", "Trebuchet MS", sans-serif;
+    font-family: 'Gotham Pro', sans-serif;
     color: white;
     background-color: black; /* Цвет фона как на макете */
 }
@@ -30,6 +32,7 @@ body {
     align-items: center;
     padding: 20px 80px; /* Изменение здесь — теперь 20px сверху/снизу, 40px слева/справа */
     gap: 20px;
+    border-bottom: 1px solid #414141;
 }   
 
 /* Логотип */
@@ -106,10 +109,28 @@ body {
 
 .connect {
     background-color: #b82e2e;
-    margin-left: 40px; /* Отступ от левой части экрана */
+    margin-top: 25px;
+    margin-left: 380px; /* Отступ от левой части экрана */
     display: inline-block; /* Занимает только нужное пространство */
     padding: 15px 25px; /* Внутренние отступы вокруг текста */
     text-align: center; /* Центрируем текст внутри */
+    font-size: 24px;
+}
+
+.talant {
+    margin-left: 380px;
+    font-size: 124px;
+}
+
+.description {
+    margin: 380px;
+}
+
+.title {
+    font-size: 64px;
+}
+
+.description_description {
     font-size: 24px;
 }
 
@@ -166,8 +187,9 @@ body {
 
 <body>
     <p class="section-title__caption"><div class="connect">ПРИСОЕДИНЯЙТЕСЬ</div></p>
-    <h2>Mundfish<br>ищет таланты!</h2><h1>MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</h1>
+    <h2><div class = "talant">MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</div></h1>
 
+    <div class = "description">
     <h3>НАША КОМАНДА</h3>
     <p>Мы — Mundfish, независимая студия-разработчик игр, которая стремится развивать и поддерживать уникальные, оригинальные идеи и предоставлять сотрудникам возможности для реализации их самых смелых творческих амбиций.</p>
     <p>Самое важное для нас — это игроки. Ради них мы каждый день стремимся превосходить ожидания, создавая новые игровые миры. В нашем сообществе мы стремимся к созданию атмосферы взаимного доверия и уважения.</p>
@@ -177,6 +199,7 @@ body {
     <h3>НАШИ ОФИСЫ</h3>
     <p><b>Главный офис компании находится на Кипре, а центры разработки — в Абу-Даби (ОАЭ) и Ереване (Армения).</b></p>
     <p><b>Мы поддерживаем удалённую работу по всему миру.</b></p>
+    </div>
 
     <h3>ВАКАНСИИ</h3>
     <p>МЫ ОЧЕНЬ НУЖДАЕМСЯ В</p>
