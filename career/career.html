@@ -2,46 +2,61 @@
 <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Mundfish</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="../career/favicon.ico">
+<link rel="stylesheet" href="Styles/swiper-vue.25ac1039.css">
+<link rel="stylesheet" href="Styles/UiButtonSquare.26f98698.css">
+<link rel="stylesheet" href="Styles/CommonTitle.168d8520.css">
+<link rel="stylesheet" href="Styles/UiLink.8385fcea.css">
+<link rel="stylesheet" href="Styles/SectionCardsItem.33192f47.css">
 <link rel="stylesheet" href="Styles/footer.css">
-
 <style>
-    /* Общие стили */   
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+header {
+    font-size: 24px;
+    text-align: center;
 }
 
 body {
     font-family: "Futura", "Trebuchet MS", sans-serif;
     color: white;
+    background-color: black; /* Цвет фона как на макете */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: auto;
+    height: 100px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-}
+    padding: 20px 80px; /* Изменение здесь — теперь 20px сверху/снизу, 40px слева/справа */
+    gap: 20px;
+}   
 
 /* Логотип */
 .logo {
-    display: flex;
-    align-items: center;
+    flex-shrink: 0; /* Не даем лого сжиматься */
+    align-self: center; /* Выравнивание по левому верхнему углу */
 }
 
 .logo img {
-    margin-right: 5px;
+    width: auto; /* Убираем жесткие размеры */
+    height: 40px; /* Фиксируем высоту */
+    object-fit: contain; /* Сохраняем пропорции */
+}
+
+.menu-container {
+    flex-grow: 1; /* Занимает всё оставшееся пространство */
+    display: flex;
+    justify-content: space-evenly; /* Или space-around */
 }
 
 /* Меню */
 .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .menu li a {
@@ -50,28 +65,29 @@ body {
     font-weight: bold;
     padding: 10px 15px;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .menu li a:hover,
 .menu li a.active {
-    background-color: #e74c3c; /* Красный фон для активного элемента */
+    background-color: #b82e2e;
     color: white;
 }
 
 /* Социальные иконки */
 .social-icons {
-    display: flex;
-    gap: 15px;
+    gap: 8px;
 }
 
 .social-icons a img {
-    filter: invert(1); /* Белые иконки на темном фоне */
+    width: 20px;
+    height: 20px;
 }
 
 /* Языковой переключатель */
 .language-switcher {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .language-switcher a {
@@ -80,12 +96,21 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
 }
 
 .language-switcher a img {
-    width: 20px;
-    height: 12px;
+    width: 16px; /* Уменьшаем размер флагов */
+    height: 11px;
+}
+
+.connect {
+    background-color: #b82e2e;
+    margin-left: 40px; /* Отступ от левой части экрана */
+    display: inline-block; /* Занимает только нужное пространство */
+    padding: 15px 25px; /* Внутренние отступы вокруг текста */
+    text-align: center; /* Центрируем текст внутри */
+    font-size: 24px;
 }
 
 /* Основной контент */
@@ -102,35 +127,46 @@ body {
 
 <header>
     <div class="container">
+        <!-- Логотип -->
         <div class="logo">
-            <img src="logo.png" alt="Логотип Mundfish" width="30" height="30">
-            <span>MUNDFISH</span>
+            <img src="../career/pictures/media/logo.png" alt="Логотип Mundfish" height="50">
         </div>
-        <nav>
+
+        <!-- Меню -->
+        <nav class="menu-container">
             <ul class="menu">
                 <li><a href="#">О НАС</a></li>
                 <li><a href="#">ПРОЕКТЫ</a></li>
-                <li><a href="#" class="active">КАРЬЕРА</a></li>
+                <li><a href="#" class="active"><span style="color: #ebab2f">КАРЬЕРА</span></a></li>
                 <li><a href="#">НОВОСТИ</a></li>
                 <li><a href="#">КОНТАКТЫ</a></li>
                 <li><a href="#">ЗАГРУЗКИ</a></li>
                 <li><a href="#">ATOMIC UNIVERSE</a></li>
             </ul>
         </nav>
+
+        <!-- Соцсети -->
         <div class="social-icons">
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/youtube-66a79a0aa2b73635794195.svg" alt="YouTube" width="20" height="20"></a>
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66448e5a0eb37789504385-6786062c6e226909016559.svg" alt="Twitter" width="20" height="20"></a>
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/insta-66a79a185a447302564690.svg" alt="Instagram" width="20" height="20"></a>
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66a79a3100550469937811.svg" alt="Discord" width="20" height="20"></a>
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/tiktok-66a79a2275107537146932.svg" alt="TikTok" width="20" height="20"></a>
-            <a href="#"><img src="https://file.mundfish.com/upload/media/image/union-1-6787970ec664e225668929.svg" alt="Bilibili" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/youtube-66a79a0aa2b73635794195.svg"  alt="YouTube"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66448e5a0eb37789504385-6786062c6e226909016559.svg"  alt="Twitter"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/insta-66a79a185a447302564690.svg"  alt="Instagram"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66a79a3100550469937811.svg"  alt="Discord"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/tiktok-66a79a2275107537146932.svg"  alt="TikTok"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/union-1-6787970ec664e225668929.svg"  alt="Bilibili"></a>
+        </div>
+
+        <!-- Языковой переключатель -->
+        <div class="language-switcher">
+            <a href="#"><img src="../career/pictures/media/42x30-en-67fe2e822cfa2838406341.jpg" alt="English"> EN</a>
+            <a href="#"><img src="../career/pictures/media/42x30-ru-67fe2ea8e7a1b148708672.jpg" alt="Russian"> RU</a>
+            <a href="#"><img src="../career/pictures/media/42x30-cn-67fe2eb645545665046994.jpg" alt="Chinese"> ZH</a>
         </div>
     </div>
 </header>
 
 <body>
-    <p class="section-title__caption">Присоединяйтесь</p>
-    <h2 class="common-title common-title_glitch section-title__title" data-glitch="Mundfish ищет таланты!">Mundfish<br>ищет таланты!</h2><h1>MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</h1>
+    <p class="section-title__caption"><div class="connect">ПРИСОЕДИНЯЙТЕСЬ</div></p>
+    <h2>Mundfish<br>ищет таланты!</h2><h1>MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</h1>
 
     <h3>НАША КОМАНДА</h3>
     <p>Мы — Mundfish, независимая студия-разработчик игр, которая стремится развивать и поддерживать уникальные, оригинальные идеи и предоставлять сотрудникам возможности для реализации их самых смелых творческих амбиций.</p>

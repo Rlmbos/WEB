@@ -1,0 +1,135 @@
+/* Шапка */
+header {
+    background-color: #000;
+    color: #fff;
+    position: sticky; /* Делаем шапку липкой */
+    top: 0; /* Фиксируем шапку в начале страницы */
+    z-index: 1000; /* Устанавливаем высокий z-index для обеспечения видимости над другими элементами */
+}
+
+/* Основной контейнер навигации */
+header .primary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Логотип */
+header .logo img {
+    display: block;
+    height: auto;
+    max-width: 200px;
+}
+
+/* Основное меню */
+header .main-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+header .main-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    position: relative;
+}
+
+header .main-menu li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+header .main-menu li a.active {
+    background-color: #841d1d; /* Красный фон для активной ссылки */
+    color: #fff; /* Белый текст для активной ссылки */
+}
+
+/* Социальные сети */
+header .social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .social-links img {
+    height: 20px;
+    width: auto;
+}
+
+/* Языки */
+header .language-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .language-switcher a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Второстепенное меню */
+.secondary-nav {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Добавляем верхнюю границу */
+}
+
+.secondary-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.secondary-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links a img {
+    filter: grayscale(100%) brightness(0.7); /* серый цвет */
+    margin-right: 10px;                      /* отступ между иконками */
+    transition: filter 0.3s ease;
+    height: 20px;
+}
+
+.social-links a:last-child img {
+    margin-right: 0; /* убираем отступ у последней иконки */
+}
+
+.social-links a:hover img {
+    filter: grayscale(0%) brightness(1); /* делаем иконку цветной при наведении */
+}
