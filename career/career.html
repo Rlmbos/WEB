@@ -159,6 +159,77 @@ body {
     padding: 420px;
 }
 
+/* Заголовки */
+.career_page h3 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.career_page p {
+    color: #919191; /* Серый текст */
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Блок с вакансиями */
+.jobs-list {
+    margin-top: 30px;
+    font-size: 48px;
+}
+
+.job-item {
+    padding: 20px;
+    border-bottom: 1px solid #2d2d2d; /* Линия между вакансиями */
+    position: relative;
+}
+
+/* Первая вакансия (выделенная) */
+.job-item.highlight {
+    background-color: #4a1b1b; /* Красный фон */
+    color: white;
+}
+
+.job-item.highlight .job-title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Метки (#remote, #senior) */
+.tags {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #2d2d2d;
+    color: rgb(177, 177, 177);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+/* Кнопка вверх (как на скриншоте) */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #b82e2e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .content h2 {
     margin-bottom: 10px;
 }
@@ -227,18 +298,65 @@ body {
         </div>
     </div>
 
+    <div class="career_page">
     <h3>ВАКАНСИИ</h3>
-    <p>МЫ ОЧЕНЬ НУЖДАЕМСЯ В</p>
-    <p>TECHNICAL GAME DESIGNER</p>
+    
+    <p style="font-size: 38px; padding-top: 120px"><b>МЫ ОЧЕНЬ НУЖДАЕСЯ В</b></p>
+    <div class="jobs-list">
+        <!-- Выделенная вакансия -->
+        <div class="job-item highlight">
+            <div class="job-title">Technical game designer</div>
+            
+            <div class="tags">
+                <span class="tag">#remote</span>
+                <span class="tag">#senior</span>
+            </div>
+        </div>
+        <p style="font-size: 38px; padding-top: 120px"><b>ТАКЖЕ МЫ ИЩЕМ</b></p>
+        <!-- Остальные вакансии -->
+        <div class="job-item"><b>
+            <div class="job-title">Character 3D Artist (Realism)</div></b>
+            <div class="tags">
+                <span class="tag">#remote</span>
+                <span class="tag">#senior</span>
+            </div>
+        </div>
+        
+        <div class="job-item"><b>
+            <div class="job-title">VFX Artist</div>
+            <div class="tags"></b>
+                <span class="tag">#remote</span>
+                <span class="tag">#senior</span>
+            </div>
+        </div>
+        
+        <div class="job-item"><b>
+            <div class="job-title">Environment Artist</div>
+            <div class="tags"></b>
+                <span class="tag">#remote</span>
+                <span class="tag">#senior</span>
+            </div>
+        </div>
 
-    <p>также мы ищем</p>
-    <ul>
-        <li>Character 3D Artist (Realism)</li>
-        <li>VFX Artist</li>
-        <li>Environment Artist</li>
-        <li>Level Artist</li>
-        <li>Middle Keyframe Animator</li>
-    </ul>
+        <div class="job-item"><b>
+            <div class="job-title">Level Artist</div>
+            <div class="tags"></b>
+                <span class="tag">#remote</span>
+                <span class="tag">#senior</span>
+            </div>
+        </div>
+
+        <div class="job-item"><b>
+            <div class="job-title">Middle Keyframe Animator</div>
+            <div class="tags"></b>
+                <span class="tag">#remote</span>
+                <span class="tag">#middle</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top">↑</button>
+</div>
 <footer class="footer">
     <div class="footer__channels">
         <div class="footer__channels-text">
