@@ -3,17 +3,134 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Mundfish</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="Styles/swiper-vue.25ac1039.css">
-<link rel="stylesheet" href="Styles/UiButtonSquare.26f98698.css">
-<link rel="stylesheet" href="Styles/CommonTitle.168d8520.css">
-<link rel="stylesheet" href="Styles/VideoComponent.de379bbb.css">
-<link rel="stylesheet" href="Styles/UiLink.8385fcea.css">
-<link rel="stylesheet" href="Styles/SectionCardsItem.33192f47.css">
 <link rel="stylesheet" href="Styles/footer.css">
+
+<style>
+    /* Общие стили */   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Futura", "Trebuchet MS", sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 5px;
+}
+
+/* Меню */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #e74c3c; /* Красный фон для активного элемента */
+    color: white;
+}
+
+/* Социальные иконки */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    filter: invert(1); /* Белые иконки на темном фоне */
+}
+
+/* Языковой переключатель */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-switcher a img {
+    width: 20px;
+    height: 12px;
+}
+
+/* Основной контент */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
+</style>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Логотип Mundfish" width="30" height="30">
+            <span>MUNDFISH</span>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">О НАС</a></li>
+                <li><a href="#">ПРОЕКТЫ</a></li>
+                <li><a href="#" class="active">КАРЬЕРА</a></li>
+                <li><a href="#">НОВОСТИ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="#">ЗАГРУЗКИ</a></li>
+                <li><a href="#">ATOMIC UNIVERSE</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/youtube-66a79a0aa2b73635794195.svg" alt="YouTube" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66448e5a0eb37789504385-6786062c6e226909016559.svg" alt="Twitter" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/insta-66a79a185a447302564690.svg" alt="Instagram" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/vector-66a79a3100550469937811.svg" alt="Discord" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/tiktok-66a79a2275107537146932.svg" alt="TikTok" width="20" height="20"></a>
+            <a href="#"><img src="https://file.mundfish.com/upload/media/image/union-1-6787970ec664e225668929.svg" alt="Bilibili" width="20" height="20"></a>
+        </div>
+    </div>
+</header>
 
 <body>
     <p class="section-title__caption">Присоединяйтесь</p>
-    <h2 class="common-title common-title_glitch section-title__title" data-glitch="Mundfish ищет таланты!">Mundfish<br>ищет таланты!</h2><h1>MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</br></h1>
+    <h2 class="common-title common-title_glitch section-title__title" data-glitch="Mundfish ищет таланты!">Mundfish<br>ищет таланты!</h2><h1>MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</h1>
 
     <h3>НАША КОМАНДА</h3>
     <p>Мы — Mundfish, независимая студия-разработчик игр, которая стремится развивать и поддерживать уникальные, оригинальные идеи и предоставлять сотрудникам возможности для реализации их самых смелых творческих амбиций.</p>
