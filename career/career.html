@@ -2,323 +2,18 @@
 <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Mundfish</title>
-<link rel="icon" type="image/x-icon" href="../career/favicon.ico">
+<link rel="icon" href="pictures/images/ico.png" type="image/x-icon">
 <link rel="stylesheet" href="Styles/swiper-vue.25ac1039.css">
 <link rel="stylesheet" href="Styles/UiButtonSquare.26f98698.css">
 <link rel="stylesheet" href="Styles/CommonTitle.168d8520.css">
 <link rel="stylesheet" href="Styles/UiLink.8385fcea.css">
 <link rel="stylesheet" href="Styles/SectionCardsItem.33192f47.css">
 <link rel="stylesheet" href="Styles/footer.css">
+<link rel="stylesheet" href="Styles/base.css">
 <link href="https://fonts.googleapis.com/css2?family=Gotham+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<style>
-header {
-    font-size: 16px;
-    text-align: center;
-}
-
-body {
-    font-family: 'Gotham Pro', sans-serif;
-    color: white;
-    background-color: black; /* Цвет фона как на макете */
-}
-
-.container {
-    max-width: auto;
-    height: 30px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 20px 80px; /* Изменение здесь — теперь 20px сверху/снизу, 40px слева/справа */
-    gap: 20px;
-    border-bottom: 1px solid #414141;
-}   
-
-/* Логотип */
-.logo {
-    flex-shrink: 0; /* Не даем лого сжиматься */
-    align-self: center; /* Выравнивание по левому верхнему углу */
-    filter: invert(1);
-}
-
-.logo img {
-    width: auto; /* Убираем жесткие размеры */
-    height: 27px; /* Фиксируем высоту */
-    object-fit: contain; /* Сохраняем пропорции */
-}
-
-.menu-container {
-    flex-grow: 1; /* Занимает всё оставшееся пространство */
-    display: flex;
-    justify-content: space-evenly; /* Или space-around */
-}
-
-/* Меню */
-.menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-}
-
-.menu li a:hover,
-.menu li a.active {
-    background-color: #b82e2e;
-    color: white;
-}
-
-/* Социальные иконки */
-.social-icons {
-    display: flex;
-    justify-content: space-between; /* Распределяет элементы по краям */
-    align-items: center;
-    gap: 24px; /* Можно оставить для минимального отступа */
-    height: 100%;
-    padding-left: 20px;
-}
-
-.social-icons a img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Языковой переключатель */
-.language-switcher {
-    display: flex;
-    gap: 5px;
-}
-
-.language-switcher a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
-
-.language-switcher a img {
-    width: 16px; /* Уменьшаем размер флагов */
-    height: 11px;
-}
-
-.connect {
-    background-color: #b82e2e;
-    margin-top: 20px;
-    margin-left: 281px; /* Отступ от левой части экрана */
-    display: inline-block; /* Занимает только нужное пространство */
-    padding: 5px 10px; /* Внутренние отступы вокруг текста */
-    text-align: center; /* Центрируем текст внутри */
-    font-size: 15px;
-}
-
-.talant {
-    margin-left: 281px;
-    font-size: 83px;
-}
-
-/* Основной контейнер */
-.description {
-  padding: 0 270px; /* Отступ только слева и справа */
-  max-width: 100%; /* Занимает всю ширину экрана */
-}
-
-/* Каждая группа (заголовок + текст) */
-.item {
-  display: flex;
-  align-items: flex-start;
-  gap: 100px; /* Отступ между title и description_description */
-  width: 100%; /* Расширяется на всю ширину контейнера */
-}
-
-.title {
-  font-size: 36px;
-  min-width: 382px; /* Минимальная ширина заголовка */
-  flex-shrink: 0; /* Не сжимается при уменьшении экрана */
-}
-
-.title2 {
-  font-size: 46px;
-  min-width: 382px; /* Минимальная ширина заголовка */
-  flex-shrink: 0; /* Не сжимается при уменьшении экрана */
-}
-
-.description_description {
-  flex-grow: 1; /* Занимает всё оставшееся пространство */
-  padding-top: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.description_description2 {
-  flex-grow: 1; /* Занимает всё оставшееся пространство */
-  padding-top: 35px;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.content {
-    margin-top: 20px;
-    padding: 20px;
-    border-top: 1px solid #333;
-}
-
-.career_page {
-    padding: 275px;
-}
-
-/* Заголовки */
-.career_page h3 {
-    color: white;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.career_page p {
-    color: #919191; /* Серый текст */
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-/* Блок с вакансиями */
-.jobs-list {
-    margin-top: 30px;
-    font-size: 48px;
-}
-
-.job-item {
-    padding: 25px;
-    border-bottom: 1px solid #474747; /* Линия между вакансиями */
-    background: #0a0a0a;
-    position: relative;
-}
-
-/* Первая вакансия (выделенная) */
-.job-item.highlight {
-    background-color: #4a1b1b; /* Красный фон */
-    color: white;
-}
-
-.job-item.highlight {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.job-item:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.job-title {
-    font-size: 34px;
-    font-weight: bold;
-}
-
-/* Метки (#remote, #senior) */
-.tags {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-right: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.tag {
-    color: rgb(177, 177, 177);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-/* Кнопка вверх (как на скриншоте) */
-.back-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: #b82e2e;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.content h2 {
-    margin-bottom: 10px;
-}
-
-.vacancies_full {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.vacancies {
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-}
-
-.sort_tag {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    font-size: 16px;
-    background-color: #414141;
-    border-radius: 4px;
-    margin-left: auto;
-    height: 35px;
-    width: 220px;
-}
-
-/* Галерея */
-.galery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Всегда 2 колонки */
-    gap: 20px;
-    align-items: stretch;
-    padding-bottom: 20px;
-    max-width: 1200px; /* Фиксная ширина контейнера */
-    margin: 0 auto; /* Центрирование */
-    width: 100%; /* Чтобы контейнер не сжимался */
-    box-sizing: border-box;
-}
-
-/* Первое изображение (полная ширина) */
-.galery img:first-child {
-    grid-column: span 2;
-    width: 100%; /* Растягивается на всю ширину */
-    height: 600px; /* Фиксная высота (пример) */
-    object-fit: cover;
-    display: block;
-}
-
-/* Остальные изображения */
-.galery img:nth-child(n+2) {
-    width: 100%; /* Растягивается на всю ширину колонки */
-    height: 300px; /* Фиксная высота (пример) */
-    object-fit: cover;
-    display: block;
-}
-</style>
-
-<header>
+<header class="fixed-header">
     <div class="container">
         <!-- Логотип -->
         <div class="logo">
@@ -356,7 +51,7 @@ body {
         </div>
     </div>
 </header>
-
+<div id="top"></div>
 <body>
     <p class="section-title__caption"><div class="connect">ПРИСОЕДИНЯЙТЕСЬ</div></p>
     <h2><div class = "talant">MUNDFISH<br>ИЩЕТ ТАЛАНТЫ!</div></h1>
@@ -444,8 +139,6 @@ body {
             </div>
         </div>
     </div>
-
-    <button class="back-to-top">↑</button>
     <div class="galery">
         <img style="padding-top: 100px" src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-10-1-67095582173a7922001264.jpg" alt="img1">
         <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-03-2-670956b6c9a43112458524.jpg" alt="img2">
@@ -602,12 +295,8 @@ body {
         <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
         <a href="#">ПРАВИЛА КОНКУРСА</a>
     </div>
-    <div class="back-to-top" onclick="scrollToTop()">
-        ↑
-    </div>
+    <a href="#top" class="back-to-top">⇧</a>
 </footer>
-
-<script src="/jses/footer.js"></script>
 </body>
 <script>window.__NUXT__={};window.__NUXT__.config={public:{baseUrl:"https://file.mundfish.com"},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body>
 </html>
