@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Mundfish</title>
 <link rel="icon" type="image/x-icon" href="../career/favicon.ico">
 <link rel="stylesheet" href="Styles/swiper-vue.25ac1039.css">
@@ -14,7 +14,7 @@
 
 <style>
 header {
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .container {
     max-width: auto;
-    height: 100px;
+    height: 30px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -39,11 +39,12 @@ body {
 .logo {
     flex-shrink: 0; /* Не даем лого сжиматься */
     align-self: center; /* Выравнивание по левому верхнему углу */
+    filter: invert(1);
 }
 
 .logo img {
     width: auto; /* Убираем жесткие размеры */
-    height: 40px; /* Фиксируем высоту */
+    height: 27px; /* Фиксируем высоту */
     object-fit: contain; /* Сохраняем пропорции */
 }
 
@@ -79,12 +80,17 @@ body {
 
 /* Социальные иконки */
 .social-icons {
-    gap: 8px;
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center;
+    gap: 24px; /* Можно оставить для минимального отступа */
+    height: 100%;
+    padding-left: 20px;
 }
 
 .social-icons a img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 /* Языковой переключатель */
@@ -109,22 +115,22 @@ body {
 
 .connect {
     background-color: #b82e2e;
-    margin-top: 25px;
-    margin-left: 420px; /* Отступ от левой части экрана */
+    margin-top: 20px;
+    margin-left: 281px; /* Отступ от левой части экрана */
     display: inline-block; /* Занимает только нужное пространство */
-    padding: 15px 25px; /* Внутренние отступы вокруг текста */
+    padding: 5px 10px; /* Внутренние отступы вокруг текста */
     text-align: center; /* Центрируем текст внутри */
-    font-size: 24px;
+    font-size: 15px;
 }
 
 .talant {
-    margin-left: 420px;
-    font-size: 124px;
+    margin-left: 281px;
+    font-size: 83px;
 }
 
 /* Основной контейнер */
 .description {
-  padding: 0 420px; /* Отступ только слева и справа */
+  padding: 0 270px; /* Отступ только слева и справа */
   max-width: 100%; /* Занимает всю ширину экрана */
 }
 
@@ -132,20 +138,33 @@ body {
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 140px; /* Отступ между title и description_description */
+  gap: 100px; /* Отступ между title и description_description */
   width: 100%; /* Расширяется на всю ширину контейнера */
 }
 
 .title {
-  font-size: 64px;
-  min-width: 570px; /* Минимальная ширина заголовка */
+  font-size: 36px;
+  min-width: 382px; /* Минимальная ширина заголовка */
+  flex-shrink: 0; /* Не сжимается при уменьшении экрана */
+}
+
+.title2 {
+  font-size: 46px;
+  min-width: 382px; /* Минимальная ширина заголовка */
   flex-shrink: 0; /* Не сжимается при уменьшении экрана */
 }
 
 .description_description {
   flex-grow: 1; /* Занимает всё оставшееся пространство */
-  padding-top: 40px;
-  font-size: 24px;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.description_description2 {
+  flex-grow: 1; /* Занимает всё оставшееся пространство */
+  padding-top: 35px;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -156,7 +175,7 @@ body {
 }
 
 .career_page {
-    padding: 420px;
+    padding: 275px;
 }
 
 /* Заголовки */
@@ -179,8 +198,9 @@ body {
 }
 
 .job-item {
-    padding: 20px;
-    border-bottom: 1px solid #2d2d2d; /* Линия между вакансиями */
+    padding: 25px;
+    border-bottom: 1px solid #474747; /* Линия между вакансиями */
+    background: #0a0a0a;
     position: relative;
 }
 
@@ -190,8 +210,17 @@ body {
     color: white;
 }
 
-.job-item.highlight .job-title {
-    font-size: 48px;
+.job-item.highlight {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.job-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-size: 34px;
     font-weight: bold;
 }
 
@@ -207,11 +236,10 @@ body {
 }
 
 .tag {
-    background-color: #2d2d2d;
     color: rgb(177, 177, 177);
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 /* Кнопка вверх (как на скриншоте) */
@@ -232,6 +260,61 @@ body {
 
 .content h2 {
     margin-bottom: 10px;
+}
+
+.vacancies_full {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.vacancies {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.sort_tag {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 16px;
+    background-color: #414141;
+    border-radius: 4px;
+    margin-left: auto;
+    height: 35px;
+    width: 220px;
+}
+
+/* Галерея */
+.galery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Всегда 2 колонки */
+    gap: 20px;
+    align-items: stretch;
+    padding-bottom: 20px;
+    max-width: 1200px; /* Фиксная ширина контейнера */
+    margin: 0 auto; /* Центрирование */
+    width: 100%; /* Чтобы контейнер не сжимался */
+    box-sizing: border-box;
+}
+
+/* Первое изображение (полная ширина) */
+.galery img:first-child {
+    grid-column: span 2;
+    width: 100%; /* Растягивается на всю ширину */
+    height: 600px; /* Фиксная высота (пример) */
+    object-fit: cover;
+    display: block;
+}
+
+/* Остальные изображения */
+.galery img:nth-child(n+2) {
+    width: 100%; /* Растягивается на всю ширину колонки */
+    height: 300px; /* Фиксная высота (пример) */
+    object-fit: cover;
+    display: block;
 }
 </style>
 
@@ -290,8 +373,8 @@ body {
     </div>
 
     <div class="item">
-        <h3 class="title"><b>НАШИ ОФИСЫ</b></h3>
-        <div class="description_description">
+        <h3 class="title2"><b>НАШИ ОФИСЫ</b></h3>
+        <div class="description_description2">
             <p><b>Главный офис компании находится на Кипре, а центры разработки — в Абу-Даби (ОАЭ) и Ереване (Армения).</b></p>
             <p><b>Мы поддерживаем удалённую работу по всему миру.</b></p>
             </div>
@@ -299,20 +382,27 @@ body {
     </div>
 
     <div class="career_page">
-    <h3>ВАКАНСИИ</h3>
+        <div class = "vacancies_full">
+            <div class = "vacancies">
+            <b>ВАКАНСИИ</b>
+            </div>
+            <div class = "sort_tag">
+                Сортировака по тегам ⯆
+            </div>
+        </div>
     
-    <p style="font-size: 38px; padding-top: 120px"><b>МЫ ОЧЕНЬ НУЖДАЕСЯ В</b></p>
+    <p style="font-size: 24px; padding-top: 120px"><b>МЫ ОЧЕНЬ НУЖДАЕСЯ В</b></p>
     <div class="jobs-list">
         <!-- Выделенная вакансия -->
         <div class="job-item highlight">
-            <div class="job-title">Technical game designer</div>
+            <div class="job-title">Technical Game Designer</div>
             
             <div class="tags">
                 <span class="tag">#remote</span>
                 <span class="tag">#senior</span>
             </div>
         </div>
-        <p style="font-size: 38px; padding-top: 120px"><b>ТАКЖЕ МЫ ИЩЕМ</b></p>
+        <p style="font-size: 24px; padding-top: 120px"><b>ТАКЖЕ МЫ ИЩЕМ</b></p>
         <!-- Остальные вакансии -->
         <div class="job-item"><b>
             <div class="job-title">Character 3D Artist (Realism)</div></b>
@@ -356,7 +446,18 @@ body {
     </div>
 
     <button class="back-to-top">↑</button>
+    <div class="galery">
+        <img style="padding-top: 100px" src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-10-1-67095582173a7922001264.jpg" alt="img1">
+        <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-03-2-670956b6c9a43112458524.jpg" alt="img2">
+        <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/office-13-1-2-670956c0a9d3d775128865.jpg" alt="img3">
+    </div>
+    <div class="galery">
+        <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/office-02-670955659f11c455414839.jpg" alt="img4">
+        <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-02-670955c7cf61a481614349.jpeg" alt="img5">
+        <img src="https://file.mundfish.com/cache/media/1200w/upload/media/image/careers-07-1-670955931e2d8248300017.jpg" alt="img6">
+    </div>
 </div>
+
 <footer class="footer">
     <div class="footer__channels">
         <div class="footer__channels-text">
@@ -501,7 +602,6 @@ body {
         <a href="#">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a>
         <a href="#">ПРАВИЛА КОНКУРСА</a>
     </div>
-
     <div class="back-to-top" onclick="scrollToTop()">
         ↑
     </div>
